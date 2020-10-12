@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 USER root
 
-RUN apt-get update -qqy
+RUN apt-get update -qqy && apt-get -qqy install curl
 RUN apt-get -qqy install nano
 RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 RUN npm install ganache-cli -g

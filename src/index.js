@@ -2,7 +2,7 @@ var http = require("http");
 const { spawn } = require("child_process");
 
 let port = process.env.PORT || 3000;
-const spawnGanache = spawn("ganache-cli", ["-b 9 -h 127.0.0.1", "-n", "-u 0", "-p " + port]);
+const spawnGanache = spawn("ganache-cli", ["-b 9 -h 0.0.0.0", "-n", "-u 0", "-p " + port]);
 
 console.log(port);
 

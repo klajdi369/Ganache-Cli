@@ -13,7 +13,7 @@ RUN npm install express --save
 ###INSTALLING NGROK###
 #RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 #RUN unzip ngrok-stable-linux-amd64.zip
-##IMPORTANT ===> MANUALLY START NGROK
+##IMPORTANT ===> MANUALLY START NGROK //REMOVED FOR NOW
 
 #WORKDIR /home/seluser
 #USER seluser

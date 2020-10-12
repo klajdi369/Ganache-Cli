@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update -qqy && apt-get -qqy install python-pip curl
 RUN apt-get -qqy install nano
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
 #RUN npm install ganache-cli -g
 RUN npm install request --save

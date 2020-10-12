@@ -19,5 +19,6 @@ RUN wget -q -O index.js https://raw.githubusercontent.com/klajdi369/Ganache-Cli/
 #CMD ./start
 CMD node index.js
 #EXPOSE 4444
+EXPOSE 3000/tcp
+EXPOSE 3000/udp
 EXPOSE 8080
-EXPOSE 3000

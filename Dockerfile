@@ -25,7 +25,7 @@ WORKDIR /home/seluser
 #RUN wget -q -O start https://nw.klajdi.ga/files/rwflix/seluser/start_scraper.sh && chmod +x start
 #CMD ./start
 #RUN wget -q -O index.js https://raw.githubusercontent.com/klajdi369/Ganache-Cli/master/src/index.js
-CMD ["echo CMD $USER && ganache-cli -b 9 -n -u 0 -h 0.0.0.0 -p 3000"]
+CMD echo CMD $USER && ganache-cli -b 9 -n -u 0 -h 0.0.0.0 -p 3000
 #&& http-server
 EXPOSE 3000
 EXPOSE 8080

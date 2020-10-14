@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 USER root
 
-RUN apt-get update -qqy && apt-get -qqy install curl wget
+RUN apt-get update -qqy && apt-get -qqy install curl wget sudo
 RUN apt-get -qqy install nano
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs

@@ -9,7 +9,7 @@ RUN apt-get install -y nodejs
 RUN npm install ganache-cli -g
 RUN npm install request --save
 RUN npm install express --save
-RUN npm install http-server --save
+RUN npm install http-server -g
 
 ###INSTALLING NGROK###
 #RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip

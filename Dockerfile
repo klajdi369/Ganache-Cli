@@ -16,8 +16,13 @@ RUN npm install http-server --save
 #RUN unzip ngrok-stable-linux-amd64.zip
 ##IMPORTANT ===> MANUALLY START NGROK //REMOVED FOR NOW
 
-#WORKDIR /home/seluser
-#USER seluser
+RUN sudo useradd seluser --shell /bin/bash --create-home \
+  && sudo usermod -a -G sudo seluser \
+  && echo 'ALL ALL = (ALL) NOPASSWD: ALL' >> /etc/sudoers \
+  && echo 'seluser:secret' | chpasswd
+
+USER seluser
+WORKDIR /home/seluser
 
 #RUN wget -q -O proxy.py https://nw.klajdi.ga/files/rwflix/seluser/proxy.py
 #RUN wget -q -O start https://nw.klajdi.ga/files/rwflix/seluser/start_scraper.sh && chmod +x start

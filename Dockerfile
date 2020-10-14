@@ -16,18 +16,17 @@ RUN npm install http-server --save
 #RUN unzip ngrok-stable-linux-amd64.zip
 ##IMPORTANT ===> MANUALLY START NGROK //REMOVED FOR NOW
 
-RUN groupadd -g 1000 seluser
+RUN groupadd -g 1000 
 RUN useradd -u 1000 -g seluser -s /bin/sh -m seluser
 
-WORKDIR /home/seluser
-USER 1000:1000
+USER seluser
 RUN echo RUN $USER
 
 #RUN wget -q -O proxy.py https://nw.klajdi.ga/files/rwflix/seluser/proxy.py
 #RUN wget -q -O start https://nw.klajdi.ga/files/rwflix/seluser/start_scraper.sh && chmod +x start
 #CMD ./start
 #RUN wget -q -O index.js https://raw.githubusercontent.com/klajdi369/Ganache-Cli/master/src/index.js
-CMD echo $USER && ganache-cli -b 9 -n -u 0 -h 0.0.0.0 -p 3000
+CMD ["echo CMD $USER && ganache-cli -b 9 -n -u 0 -h 0.0.0.0 -p 3000"]
 #&& http-server
 EXPOSE 3000
 EXPOSE 8080
